@@ -1,71 +1,120 @@
 {
-  "versao": 2,
-  "atualizado_em": "2026-03-21",
-  "salario_minimo": 1621.00,
-  "inss": {
-    "descricao": "Desconto progressivo por faixa",
+  "version": "2026.03",
+  "valid_from": "2026-01-01",
+  "valid_until": "2026-12-31",
+  "country": "BR",
+  "currency": "BRL",
+  "general": {
+    "salario_minimo_nacional": 1621.00,
+    "teto_inss": 8475.55,
+    "horas_mensais_padrao": 220,
+    "horas_mensais_alternativa": 200,
+    "adicional_noturno": 0.20,
+    "adicional_periculosidade": 0.30,
+    "adicional_insalubridade": [0.10, 0.20, 0.40],
+    "fgts_patronal": 0.08,
+    "inss_pro_labore_pj": 0.11,
+    "limite_isencao_dividendos_mensal": 50000.00,
+    "irrf_aliquota_dividendos_acima_limite": 0.10
+  },
+  "inss_empregado_clt": {
+    "tipo": "progressivo",
     "faixas": [
-      { "ate": 1518.00, "aliquota": 7.5 },
-      { "ate": 2793.88, "aliquota": 9.0 },
-      { "ate": 4190.83, "aliquota": 12.0 },
-      { "ate": 8157.41, "aliquota": 14.0 },
-      { "ate": null, "aliquota": 14.0, "teto_aplicado": true }
-    ]
-  },
-  "imposto_renda": {
-    "isencao_mensal": 5000.00,
-    "faixa_reducao": {
-      "inicio": 5000.00,
-      "fim": 7350.00
-    },
-    "deducoes": {
-      "dependente_valor": 189.59
-    },
-    "tabela_progressiva": [
-      { "ate": 2428.80, "aliquota": 0.0, "deducao": 0.0 },
-      { "ate": 2826.65, "aliquota": 7.5, "deducao": 182.16 },
-      { "ate": 3751.05, "aliquota": 15.0, "deducao": 394.16 },
-      { "ate": 4664.68, "aliquota": 22.5, "deducao": 675.49 },
-      { "ate": null, "aliquota": 27.5, "deducao": 908.73 }
-    ]
-  },
-  "horas_extras": {
-    "descricao": "Regras CLT para horas extras (Art. 59 CLT, Art. 7º XVI CF/88 e Súmulas TST)",
-    "carga_horaria_padrao_mensal": 220,
-    "limite_diario": 2,
-    "adicionais": [
       {
-        "tipo": "normal_dia_util",
-        "adicional_percentual": 50,
-        "multiplicador": 1.5,
-        "descricao": "Horas extras em dias úteis (segunda a sábado). Mínimo constitucional de 50%."
+        "de": 0.00,
+        "ate": 1621.00,
+        "aliquota": 0.075,
+        "parcela_deduzir": 0.00
       },
       {
-        "tipo": "domingo_feriado",
-        "adicional_percentual": 100,
-        "multiplicador": 2.0,
-        "descricao": "Trabalho em domingos e feriados sem folga compensatória. Pagamento em dobro."
+        "de": 1621.01,
+        "ate": 2902.84,
+        "aliquota": 0.09,
+        "parcela_deduzir": 24.32
       },
       {
-        "tipo": "noturno",
-        "adicional_percentual": 20,
-        "multiplicador": 1.2,
-        "periodo": "22h às 5h",
-        "hora_reduzida": "52min30s equivale a 1h fictícia",
-        "descricao": "Adicional noturno urbano. Acumula com hora extra (ex: hora extra noturna = 50% + 20% = 70% efetivo ou mais)."
+        "de": 2902.85,
+        "ate": 4354.27,
+        "aliquota": 0.12,
+        "parcela_deduzir": 111.40
       },
       {
-        "tipo": "hora_extra_noturna",
-        "multiplicador_combinado": "1.5 (hora extra) × 1.2 (noturno) = 1.8",
-        "descricao": "Acumulação obrigatória: adicional de hora extra + adicional noturno."
+        "de": 4354.28,
+        "ate": 8475.55,
+        "aliquota": 0.14,
+        "parcela_deduzir": 198.49
       }
     ],
-    "regras_gerais": [
-      "O valor da hora normal = salário bruto / carga_horaria_mensal (padrão 220h).",
-      "Horas extras entram na base de cálculo de INSS, IRRF, 13º, férias e FGTS quando habituais.",
-      "Percentuais podem ser maiores via Convenção Coletiva de Trabalho (CCT) ou Acordo Coletivo (ACT).",
-      "Registro obrigatório via ponto eletrônico ou manual.",
-      "Limite máximo recomendado: evitar excesso habitual para não caracterizar jornada excessiva."
-    ]
+    "max_contribuicao": 988.09
+  },
+  "irrf_mensal": {
+    "desconto_simplificado_mensal": 607.20,
+    "deducao_por_dependente_mensal": 189.59,
+    "tabela_base": [
+      {
+        "de": 0.00,
+        "ate": 2428.80,
+        "aliquota": 0.0,
+        "parcela_deduzir": 0.00
+      },
+      {
+        "de": 2428.81,
+        "ate": 2826.65,
+        "aliquota": 0.075,
+        "parcela_deduzir": 182.16
+      },
+      {
+        "de": 2826.66,
+        "ate": 3751.05,
+        "aliquota": 0.15,
+        "parcela_deduzir": 394.16
+      },
+      {
+        "de": 3751.06,
+        "ate": 4664.68,
+        "aliquota": 0.225,
+        "parcela_deduzir": 675.49
+      },
+      {
+        "de": 4664.69,
+        "ate": 999999.99,
+        "aliquota": 0.275,
+        "parcela_deduzir": 908.73
+      }
+    ],
+    "reducao_especial_2026": {
+      "descricao": "Lei 15.270/2025 - redução mensal para isenção efetiva até R$5000 + gradual até R$7350",
+      "faixas": [
+        {
+          "de": 0.00,
+          "ate": 5000.00,
+          "reducao_max": 312.89,
+          "formula": "min(imposto_apurado, 312.89) → zera IR se <=5000 após tabela"
+        },
+        {
+          "de": 5000.01,
+          "ate": 7350.00,
+          "reducao_inicial": 978.62,
+          "fator": 0.133145,
+          "formula": "978.62 - (0.133145 * rendimentos_tributaveis_mensais)"
+        },
+        {
+          "de": 7350.01,
+          "ate": 999999.99,
+          "reducao": 0.00
+        }
+      ]
+    }
+  },
+  "pj": {
+    "inss_socio": 0.11,
+    "isencao_dividendos_mensal": 50000.00,
+    "irrf_sobre_excedente_dividendos": 0.10
+  },
+  "outros": {
+    "vale_transporte_max_desconto": 0.06,
+    "pensao_alimenticia_deducao": "valor real informado",
+    "maior_65_anos_isento_prev": 1903.98,
+    "limite_anual_desconto_simplificado": 17640.00
   }
 }
