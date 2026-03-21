@@ -117,4 +117,24 @@
     "maior_65_anos_isento_prev": 1903.98,
     "limite_anual_desconto_simplificado": 17640.00
   }
+  "encargos_empresa": {
+  "simples_nacional": {
+    "inss_patronal": 0.00,
+    "rat_fap": 0.02,
+    "sistema_s": 0.058,
+    "salario_educacao": 0.025
+  },
+  "lucro_presumido_real": {
+    "inss_patronal": 0.20,
+    "rat_fap": 0.02,
+    "sistema_s": 0.058,
+    "salario_educacao": 0.025
+  },
+  "provisoes_comuns": {
+    "fgts": 0.08,
+    "decimo_terceiro": 0.0833,
+    "ferias_mais_terco": 0.1481,
+    "multa_rescisao_fgts": 0.04
+  }
+}
 }
