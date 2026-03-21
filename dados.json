@@ -1,19 +1,37 @@
 {
+  "versao": 1,
+  "atualizado_em": "2026-01-01",
+
   "salario_minimo": 1621.00,
-  "ir": {
-    "isencao": 5000,
-    "faixa_reducao": {
-      "inicio": 5000,
-      "fim": 7350
-    },
-    "tabela": [
-      {"ate": 2428.80, "aliquota": 0},
-      {"ate": 2826.65, "aliquota": 7.5},
-      {"ate": 3751.05, "aliquota": 15},
-      {"ate": 4664.68, "aliquota": 22.5},
-      {"ate": null, "aliquota": 27.5}
+
+  "inss": {
+    "descricao": "Desconto progressivo por faixa",
+    "faixas": [
+      { "ate": 1518.00, "aliquota": 7.5 },
+      { "ate": 2793.88, "aliquota": 9.0 },
+      { "ate": 4190.83, "aliquota": 12.0 },
+      { "ate": 8157.41, "aliquota": 14.0 },
+      { "ate": null, "aliquota": 14.0, "teto_aplicado": true }
     ]
   },
-  "atualizado_em": "23-03-2026"
 
+  "imposto_renda": {
+    "isencao_mensal": 5000.00,
+    "faixa_reducao": {
+      "inicio": 5000.00,
+      "fim": 7350.00
+    },
+
+    "deducoes": {
+      "dependente_valor": 189.59
+    },
+
+    "tabela_progressiva": [
+      { "ate": 2428.80, "aliquota": 0.0, "deducao": 0.0 },
+      { "ate": 2826.65, "aliquota": 7.5, "deducao": 182.16 },
+      { "ate": 3751.05, "aliquota": 15.0, "deducao": 394.16 },
+      { "ate": 4664.68, "aliquota": 22.5, "deducao": 675.49 },
+      { "ate": null, "aliquota": 27.5, "deducao": 908.73 }
+    ]
+  }
 }
