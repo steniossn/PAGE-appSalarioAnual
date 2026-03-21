@@ -106,18 +106,6 @@
       ]
     }
   },
-  "pj": {
-    "inss_socio": 0.11,
-    "isencao_dividendos_mensal": 50000.00,
-    "irrf_sobre_excedente_dividendos": 0.10
-  },
-  "outros": {
-    "vale_transporte_max_desconto": 0.06,
-    "pensao_alimenticia_deducao": "valor real informado",
-    "maior_65_anos_isento_prev": 1903.98,
-    "limite_anual_desconto_simplificado": 17640.00
-  }
-{
   "encargos_empresa": {
     "simples_nacional_anexo_i_ii_iii_v": {
       "inss_patronal": 0.00,
@@ -138,6 +126,16 @@
       "ferias_mais_terco": 0.1111,
       "multa_rescisao_fgts_media": 0.04
     }
+  },
+  "pj": {
+    "inss_socio": 0.11,
+    "isencao_dividendos_mensal": 50000.00,
+    "irrf_sobre_excedente_dividendos": 0.10
+  },
+  "outros": {
+    "vale_transporte_max_desconto": 0.06,
+    "pensao_alimenticia_deducao": "valor real informado",
+    "maior_65_anos_isento_prev": 1903.98,
+    "limite_anual_desconto_simplificado": 17640.00
   }
-}
 }
