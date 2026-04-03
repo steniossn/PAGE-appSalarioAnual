@@ -8,8 +8,8 @@
     "salarioMinimoNacional": 1621.00
   },
   "cargaHorariaMes": 220,
-  "tetoDescontoInss": 8475.55,
   "inssEmpregadoClt": {
+    "tetoDescontoInss": 8475.55,
     "faixas": [
       { "ate": 1621.00, "aliquota": 0.075 },
       { "ate": 2902.84, "aliquota": 0.09 },
